@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Social proof section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <!-- contenedor de 3 contenedores (Header, Califacations, Reviews) -->
+    <div class="container">
+      <!-- grid -->
+      <header>
+        <h1>10,000+ of our users love our products.</h1>
+        <p>
+          We only provide great products combined with excellent customer
+          service. See what our satisfied customers are saying about our
+          services.
+        </p>
+      </header>
+      <!-- contenedor de estrellas de 539 x 200 px -->
+      <div class="starscontainer">
+        <!-- contenedores de 443 x 58 -->
+        <!-- flexbox + aling-self-->
+        <div class="stars star1">
+          <div class="fivestarts">
+            <img src="images\icon-star.svg" alt="" />
+            <img src="images\icon-star.svg" alt="" />
+            <img src="images\icon-star.svg" alt="" />
+            <img src="images\icon-star.svg" alt="" />
+            <img src="images\icon-star.svg" alt="" />
+          </div>
+          <h4>Rated 5 Stars in Reviews</h4>
+        </div>
+        <!--flex-start-->
+
+        <div class="stars star2">
+          <div class="fivestarts">
+            <img src="images\icon-star.svg" alt="" />
+            <img src="images\icon-star.svg" alt="" />
+            <img src="images\icon-star.svg" alt="" />
+            <img src="images\icon-star.svg" alt="" />
+            <img src="images\icon-star.svg" alt="" />
+          </div>
+          <h4>Rated 5 Stars in Report</h4>
+        </div>
+        <!--center-->
+
+        <div class="stars star3">
+          <div class="fivestarts">
+            <img src="images\icon-star.svg" alt="" />
+            <img src="images\icon-star.svg" alt="" />
+            <img src="images\icon-star.svg" alt="" />
+            <img src="images\icon-star.svg" alt="" />
+            <img src="images\icon-star.svg" alt="" />
+          </div>
+          <h4>Guru Rated 5 Stars in BestTech</h4>
+        </div>
+        <!--flex-end-->
+        <!-- a diferencia entre el div y span es que div se emplea para agrupar elementos html en un bloque en cambio span sirve para agrupar dentro de una línea. -->
+      </div>
+      <div class="cardscontainer">
+        <!-- contenedor de 352 x 236 px -->
+        <div class="cards card1">
+          <img src="images\image-colton.jpg" alt="" />
+          <span class="name">Colton Smith</span>
+          <span class="status">Verified Buyer</span>
+          <p>
+            "We needed the same printed design as the one we had ordered a week
+            prior. Not only did they find the original order, but we also
+            received it in time. Excellent!"
+          </p>
+        </div>
+
+        <!-- contenedor de 352 x 236 px -->
+        <div class="cards card2">
+          <img src="images\image-irene.jpg" alt="" />
+          <span class="name">Irene Roberts</span>
+          <span class="status">Verified Buyer</span>
+          <p>
+            "Customer service is always excellent and very quick turn around.
+            Completely delighted with the simplicity of the purchase and the
+            speed of delivery."
+          </p>
+        </div>
+
+        <!-- contenedor de 352 x 236 px -->
+        <div class="cards card3">
+          <img src="images\image-anne.jpg" alt="" />
+          <span class="name">Anne Wallace</span>
+          <span class="status">Verified Buyer</span>
+          <p>
+            "Put an order with this company and can only praise them for the
+            very high standard. Will definitely use them again and recommend
+            them to everyone!"
+          </p>
+        </div>
+      </div>
+
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+            Frontend Mentor
+          </a>
+          . Coded by
+          <a href="#">Your Name Here</a>
+          .
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

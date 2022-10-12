@@ -1,0 +1,254 @@
+/*-----------Fuentes de GoogleFonts---------*/
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*border box hace que el ancho y el alto sea el especificado por width y height, en vez de border box al que se le suma el padding y el border*/
+}
+body {
+  font-family: "League Spartan", sans-serif;
+  background: url(images/bg-pattern-top-mobile.svg),
+    url(images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  font-size: 15px;
+}
+.container {
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+}
+/*-------------Header------------------------*/
+/*distancia del header hasta la parte superior de 80px
+tamaño de letra del h1 = 30px*/
+header {
+  margin-bottom: 30px;
+}
+header h1 {
+  color: hsl(300, 43%, 22%);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 64px 30px 64px; /*clockwise: up right bottom left*/
+}
+header p {
+  color: hsl(303, 10%, 53%);
+  text-align: center;
+  line-height: 25px;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 28px;
+}
+/*--------------------Stars------------------*/
+.starscontainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.stars {
+  background-color: hsl(300, 24%, 96%);
+  color: hsl(300, 43%, 22%);
+  width: 330px;
+  height: 80px;
+  border-radius: 4px;
+  margin: 16px 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stars h4 {
+  min-width: 240px;
+  text-align: center;
+}
+
+.fivestarts {
+  min-width: 110px;
+}
+/*--------------------Cards------------------*/
+.cardscontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.cards {
+  max-width: 330px;
+  margin: 16px 24px 0 24px;
+  padding: 34px;
+  height: 250px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 10px;
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  grid-template-rows: 18px;
+}
+
+.cards img {
+  border-radius: 50%;
+  width: 40px;
+  /* margin-left: 10px; */
+  margin-right: 16px;
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+.cards .name {
+  font-weight: 700;
+  grid-column: 2/3;
+  height: 14px;
+}
+
+.cards .status {
+  color: hsl(333, 80%, 67%);
+  grid-column: 2;
+}
+
+.cards p {
+  font-weight: 400;
+  line-height: 20px;
+  grid-column: 1 / 3;
+  margin-top: 30px;
+}
+
+/* --------------------Footer -------------- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(273, 59%, 46%);
+}
+/*---------------------(>375 px)-------------*/
+@media only screen and (min-width: 376px) {
+  .starscontainer {
+    padding: 0 25px;
+  }
+  .star1 {
+    align-self: flex-start;
+  }
+  .star3 {
+    align-self: flex-end;
+  }
+  .cardscontainer {
+    padding: 0 14px;
+  }
+  .card1 {
+    align-self: flex-start;
+  }
+  .card3 {
+    align-self: flex-end;
+  }
+}
+/*---------------------(>768 px)-------------*/
+@media only screen and (min-width: 768px) {
+  body {
+    background: url(images/bg-pattern-top-desktop.svg),
+      url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    background-size: 400px;
+  }
+  .stars {
+    flex-direction: row;
+    width: 400px;
+    height: 50px;
+    justify-content: center;
+  }
+  .cardscontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card1 {
+    grid-column: 1/2;
+    justify-self: center;
+  }
+  .card2 {
+    grid-column: 2/3;
+    justify-self: center;
+  }
+  .card3 {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    justify-self: center;
+  }
+}
+/*---------------------(>894 px)-------------*/
+@media only screen and (min-width: 894px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    row-gap: 25px;
+  }
+  header {
+    grid-column: 1/5;
+  }
+  .starscontainer {
+    grid-column: 5/11;
+  }
+  .cardscontainer {
+    grid-column: 1/11;
+  }
+  footer {
+    grid-column: 1/-1;
+  }
+}
+/*---------------------(>1080 px)-------------*/
+@media only screen and (min-width: 1160px) {
+  body {
+    background-size: 580px;
+  }
+  .container {
+    margin: 125px auto;
+    max-width: 1110px;
+    /* border: 1px solid; */
+  }
+  .cardscontainer {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    height: 320px;
+    /* border: 1px solid; */
+  }
+  .cards {
+    margin: 0;
+  }
+}
+/*---------------------(>1440 px)-------------*/
+@media only screen and (min-width: 1440px) {
+  body {
+    overflow-y: hidden;
+  }
+  header {
+    max-width: 400px;
+    /* border: 1px solid; */
+    margin: 0;
+  }
+  header h1 {
+    font-size: 55px;
+    text-align: start;
+    line-height: 45px;
+    margin: 0;
+    /* border: 1px solid; */
+  }
+  header p {
+    text-align: start;
+    margin: 15px 0 30px 0;
+  }
+  .starscontainer {
+    /* border: 1px solid; */
+    grid-column: 6/11;
+    padding: 0;
+    justify-content: center;
+  }
+  /* .stars {
+    margin: 8px;
+  } */
+}
